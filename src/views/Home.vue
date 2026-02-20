@@ -57,13 +57,14 @@
             :key="area.title"
             class="bg-secondary/50 border border-gray-800 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 group"
           >
-            <div
+            <FeatureCard :icon="area.icon" :title="area.title" :description="area.description" />
+            <!-- <div
               class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
             >
               <component :is="area.icon" class="w-6 h-6 text-primary" />
-            </div>
-            <h3 class="text-xl font-semibold text-white mb-3">{{ area.title }}</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">{{ area.description }}</p>
+            </div> -->
+            <!-- <h3 class="text-xl font-semibold text-white mb-3">{{ area.title }}</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">{{ area.description }}</p> -->
           </div>
         </div>
 
@@ -137,6 +138,7 @@
 import { h, type Component } from 'vue'
 import Hero from '@/components/Hero.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
+import FeatureCard from '@/components/FeatureCard.vue'
 
 interface ResearchArea {
   title: string
@@ -154,6 +156,7 @@ const missions: string[] = [
 // Icon components
 const ShieldIcon = {
   //  h(tag, props?/ attributes, children?content
+  // render tell vue what to display and the h create a virtual DOM nodes
   render() {
     return h(
       'svg',

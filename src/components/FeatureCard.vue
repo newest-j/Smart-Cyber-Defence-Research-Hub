@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="bg-secondary/50 border border-gray-800 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 group"
-  >
+  <div>
     <div
       class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors"
     >
