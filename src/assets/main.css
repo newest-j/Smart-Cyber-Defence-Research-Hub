@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import './base.css';
 @import 'tailwindcss';
 
 /* Tailwind v4 theme tokens for custom color names used in components */
@@ -8,12 +8,4 @@
   --color-secondary: #111827;
   --color-primary: #06b6d4;
   --color-accent: #a78bfa;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', system-ui, sans-serif;
 }
