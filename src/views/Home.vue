@@ -120,13 +120,13 @@
           subtitle="We collaborate with academic institutions, government agencies, industry leaders, and international research organizations"
         />
 
-        <div class="flex flex-wrap justify-center items-center gap-12">
-          <div
-            v-for="i in 5"
-            :key="i"
-            class="w-32 h-16 bg-gray-800/50 rounded-lg flex items-center justify-center text-gray-500 text-sm"
-          >
-            Partner {{ i }}
+        <div class="flex flex-wrap justify-center items-center gap-6">
+          <div class="w-28 h-14 flex items-center justify-center">
+            <img src="/tetfund.png" alt="TETFund" class="w-24 h-12 object-contain" />
+          </div>
+
+          <div class="w-28 h-14 flex items-center justify-center">
+            <img src="/funaab.png" alt="FUNAAB" class="w-24 h-12 object-contain" />
           </div>
         </div>
       </div>

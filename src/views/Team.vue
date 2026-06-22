@@ -20,26 +20,23 @@
             class="bg-secondary/50 border border-gray-800 rounded-xl p-8 text-center max-w-sm hover:border-primary/50 transition-all duration-300"
           >
             <div
-              class="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center"
+              class="w-28 h-28 rounded-full mx-auto mb-4 overflow-hidden border-2 border-primary/30 shadow-lg shadow-primary/10"
             >
-              <svg
-                class="w-12 h-12 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
+              <img
+                :src="teamHead.profSodiya.image"
+                :alt="teamHead.profSodiya.name"
+                class="h-full w-full object-cover"
+              />
             </div>
-            <h4 class="text-xl font-semibold text-white mb-2">Lead Researcher / Director</h4>
-            <p class="text-primary text-sm mb-3">Director</p>
-            <p class="text-gray-400 text-sm">
-              Leading the vision and strategic direction of the Smart Cyber Defence Research Hub.
+            <h4 class="text-xl font-semibold text-white mb-2">
+              {{ teamHead.profSodiya.name }}
+            </h4>
+            <p class="text-primary text-sm mb-3">{{ teamHead.profSodiya.role }}</p>
+            <p class="text-gray-300 text-sm leading-relaxed mb-3">
+              {{ teamHead.profSodiya.department }}
+            </p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              {{ teamHead.profSodiya.summary }}
             </p>
           </div>
         </div>
@@ -49,16 +46,22 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div
             v-for="member in teamMembers"
-            :key="member.role"
-            class="bg-secondary/50 border border-gray-800 rounded-xl p-6 text-center hover:border-primary/50 transition-all duration-300"
+            :key="member.name"
+            class="bg-secondary/50 border border-gray-800 rounded-xl p-6 text-center hover:border-primary/50 transition-all duration-300 group"
           >
             <div
-              class="w-20 h-20 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center"
+              class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border border-primary/20 bg-dark/40"
             >
-              <component :is="member.icon" class="w-10 h-10 text-primary" />
+              <img
+                :src="member.image"
+                :alt="member.name"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
-            <h4 class="text-lg font-semibold text-white mb-2">{{ member.role }}</h4>
-            <p class="text-gray-400 text-sm">{{ member.description }}</p>
+            <h4 class="text-lg font-semibold text-white mb-2">{{ member.name }}</h4>
+            <p class="text-primary text-sm font-medium mb-2">{{ member.role }}</p>
+            <p class="text-gray-300 text-sm leading-relaxed mb-2">{{ member.department }}</p>
+            <p class="text-gray-400 text-sm leading-relaxed">{{ member.description }}</p>
           </div>
         </div>
 
@@ -86,107 +89,64 @@
 </template>
 
 <script setup lang="ts">
-import { h, type Component } from 'vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 
 interface TeamMember {
+  name: string
   role: string
+  department: string
   description: string
-  icon: Component
+  image: string
 }
 
-const BrainIcon = {
-  render() {
-    return h(
-      'svg',
-      { class: 'w-10 h-10', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' },
-      [
-        h('path', {
-          'stroke-linecap': 'round',
-          'stroke-linejoin': 'round',
-          'stroke-width': '2',
-          d: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
-        }),
-      ],
-    )
-  },
-}
+import profSodiyaImage from '@/assets/images/Professor Sodiya.png'
+import drAdejimiImage from '@/assets/images/Dr Adejimi.png'
+import drAkintundeImage from '@/assets/images/Dr Akintunde.png'
+import drFalanaImage from '@/assets/images/Dr Falana.jpg'
+import drAborisadeImage from '@/assets/images/Dr Aborisade.png'
 
-const NetworkIcon = {
-  render() {
-    return h(
-      'svg',
-      { class: 'w-10 h-10', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' },
-      [
-        h('path', {
-          'stroke-linecap': 'round',
-          'stroke-linejoin': 'round',
-          'stroke-width': '2',
-          d: 'M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2',
-        }),
-      ],
-    )
-  },
-}
-
-const ScaleIcon = {
-  render() {
-    return h(
-      'svg',
-      { class: 'w-10 h-10', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' },
-      [
-        h('path', {
-          'stroke-linecap': 'round',
-          'stroke-linejoin': 'round',
-          'stroke-width': '2',
-          d: 'M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3',
-        }),
-      ],
-    )
-  },
-}
-
-const AcademicIcon = {
-  render() {
-    return h(
-      'svg',
-      { class: 'w-10 h-10', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' },
-      [
-        h('path', { d: 'M12 14l9-5-9-5-9 5 9 5z' }),
-        h('path', {
-          d: 'M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z',
-        }),
-        h('path', {
-          'stroke-linecap': 'round',
-          'stroke-linejoin': 'round',
-          'stroke-width': '2',
-          d: 'M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222',
-        }),
-      ],
-    )
+const teamHead = {
+  profSodiya: {
+    name: 'Prof. Adesina S. Sodiya',
+    role: 'Principal Investigator',
+    department: 'Department of Cybersecurity, Federal University of Agriculture, Abeokuta',
+    summary:
+      'Principal Investigator leading the research vision and strategic direction of the project.',
+    image: profSodiyaImage,
   },
 }
 
 const teamMembers: TeamMember[] = [
   {
-    role: 'AI & Machine Learning Experts',
-    description: 'Developing intelligent systems for threat detection and automated response.',
-    icon: BrainIcon,
+    name: 'Dr. Alaba O. Adejimi',
+    role: 'Project Coordinator',
+    department: 'Department of Computer Science, Federal University of Agriculture, Abeokuta',
+    description:
+      'Coordinates project activities and supports the technical direction of the research.',
+    image: drAdejimiImage,
   },
   {
-    role: 'Network Security Engineers',
-    description: 'Building secure and resilient network architectures.',
-    icon: NetworkIcon,
+    name: 'Dr. Abosede A. Akintunde',
+    role: 'Project Coordinator',
+    department: 'Department of Statistics, Federal University of Agriculture, Abeokuta, Nigeria',
+    description: 'Supports data-driven analysis and research coordination for the project.',
+    image: drAkintundeImage,
   },
   {
-    role: 'Cyber Policy and Ethics Advisors',
-    description: 'Guiding ethical frameworks and regulatory compliance.',
-    icon: ScaleIcon,
+    name: 'Dr. James O. Falana',
+    role: 'Team Member',
+    department: 'Department of Cybersecurity, Federal University of Agriculture, Abeokuta',
+    description:
+      'Contributes to the project through cybersecurity research and implementation support.',
+    image: drFalanaImage,
   },
   {
-    role: 'PhD Researchers and Graduate Fellows',
-    description: 'Conducting cutting-edge research in cybersecurity.',
-    icon: AcademicIcon,
+    name: 'Dr. Dada O. Aborisade',
+    role: 'Team Member',
+    department: 'Department of Cybersecurity, Federal University of Agriculture, Abeokuta',
+    description:
+      'Supports research development and project execution across the cybersecurity workstream.',
+    image: drAborisadeImage,
   },
 ]
 </script>

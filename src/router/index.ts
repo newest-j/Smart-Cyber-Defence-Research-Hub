@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Research from '@/views/Research.vue'
 import Projects from '@/views/Projects.vue'
+import CyberXTalk from '@/views/projects/CyberXTalk.vue'
 import Team from '@/views/Team.vue'
 import Events from '@/views/Events.vue'
 import Contact from '@/views/Contact.vue'
@@ -27,6 +28,11 @@ const routes: RouteRecordRaw[] = [
     path: '/projects',
     name: 'Projects',
     component: Projects,
+  },
+  {
+    path: '/projects/cyberxtalk',
+    name: 'CyberXTalk',
+    component: CyberXTalk,
   },
   {
     path: '/team',

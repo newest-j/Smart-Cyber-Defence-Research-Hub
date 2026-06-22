@@ -74,7 +74,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-white mb-1">Location</h4>
-                  <p class="text-gray-400">Research Hub Location</p>
+                  <p class="text-gray-400">Federal University of Agriculture, Abeokuta</p>
                 </div>
               </div>
             </div>

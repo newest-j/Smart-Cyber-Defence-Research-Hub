@@ -14,7 +14,7 @@
             v-for="link in navLinks"
             :key="link.path"
             :to="link.path"
-            class="text-gray-300 hover:text-primary transition-colors duration-200 text-sm font-medium"
+            class="text-gray-300 hover:text-primary transition-colors duration-800 text-sm font-medium"
             :class="{ 'text-primary': $route.path === link.path }"
           >
             {{ link.name }}
