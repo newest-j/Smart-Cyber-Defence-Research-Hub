@@ -141,6 +141,29 @@
             </p>
           </section>
         </div>
+
+        <section class="rounded-2xl border border-gray-800 bg-secondary/50 p-8 sm:p-10">
+          <h3 class="text-2xl font-semibold text-white mb-4">Project Team</h3>
+          <p class="text-gray-400 mb-8 max-w-3xl">Meet the people driving CyberXTalk forward.</p>
+
+          <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+            <article
+              v-for="member in projectTeam"
+              :key="member.name"
+              class="rounded-xl border border-gray-800 bg-dark/40 p-5 text-center transition-all duration-300 hover:border-primary/50"
+            >
+              <div
+                class="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border border-primary/20 bg-secondary/40"
+              >
+                <img :src="member.image" :alt="member.name" class="h-full w-full object-cover" />
+              </div>
+              <h4 class="text-lg font-semibold text-white mb-2">{{ member.name }}</h4>
+              <p class="text-primary text-sm font-medium mb-2">{{ member.role }}</p>
+              <p class="text-gray-300 text-sm leading-relaxed mb-2">{{ member.department }}</p>
+              <p class="text-gray-400 text-sm leading-relaxed">{{ member.description }}</p>
+            </article>
+          </div>
+        </section>
       </div>
     </section>
   </div>
@@ -148,4 +171,60 @@
 
 <script setup lang="ts">
 import SectionTitle from '@/components/SectionTitle.vue'
+
+interface ProjectTeamMember {
+  name: string
+  role: string
+  department: string
+  description: string
+  image: string
+}
+
+import profSodiyaImage from '@/assets/images/Professor Sodiya.png'
+import drAdejimiImage from '@/assets/images/Dr Adejimi.png'
+import drAkintundeImage from '@/assets/images/Dr Akintunde.png'
+import drFalanaImage from '@/assets/images/Dr Falana.jpg'
+import drAborisadeImage from '@/assets/images/Dr Aborisade.png'
+
+const projectTeam: ProjectTeamMember[] = [
+  {
+    name: 'Prof. Adesina S. Sodiya',
+    role: 'Principal Investigator',
+    department: 'Department of Cybersecurity, Federal University of Agriculture, Abeokuta',
+    description:
+      'Principal Investigator leading the research vision and strategic direction of the project.',
+    image: profSodiyaImage,
+  },
+  {
+    name: 'Dr. Alaba O. Adejimi',
+    role: 'Project Coordinator',
+    department: 'Department of Computer Science, Federal University of Agriculture, Abeokuta',
+    description:
+      'Coordinates project activities and supports the technical direction of the research.',
+    image: drAdejimiImage,
+  },
+  {
+    name: 'Dr. Abosede A. Akintunde',
+    role: 'Project Coordinator',
+    department: 'Department of Statistics, Federal University of Agriculture, Abeokuta, Nigeria',
+    description: 'Supports data-driven analysis and research coordination for the project.',
+    image: drAkintundeImage,
+  },
+  {
+    name: 'Dr. James O. Falana',
+    role: 'Team Member',
+    department: 'Department of Cybersecurity, Federal University of Agriculture, Abeokuta',
+    description:
+      'Contributes to the project through cybersecurity research and implementation support.',
+    image: drFalanaImage,
+  },
+  {
+    name: 'Dr. Dada O. Aborisade',
+    role: 'Team Member',
+    department: 'Department of Cybersecurity, Federal University of Agriculture, Abeokuta',
+    description:
+      'Supports research development and project execution across the cybersecurity workstream.',
+    image: drAborisadeImage,
+  },
+]
 </script>
