@@ -75,12 +75,12 @@ import drAborisadeImage from '@/assets/images/Dr Aborisade.png'
 const hubTeam: TeamMember[] = [
   {
     name: 'Prof. Adesina S. Sodiya',
-    role: 'Leader / Coordinator',
+    role: 'Project Director',
     image: profSodiyaImage,
   },
   {
     name: 'Prof. Adebukola Saidat Onashoga',
-    role: 'Co-Coordinator',
+    role: 'Deputy Director',
     image: profOnashogaImage,
   },
   {
