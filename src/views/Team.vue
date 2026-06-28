@@ -80,7 +80,7 @@ const hubTeam: TeamMember[] = [
   },
   {
     name: 'Prof. Saidat A. Onashoga',
-    role: 'Research Director',
+    role: 'Deputy Research Director',
     image: profOnashogaImage,
   },
   {
