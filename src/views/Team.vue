@@ -68,6 +68,7 @@ interface TeamMember {
 
 import profSodiyaImage from '@/assets/images/Professor Sodiya.png'
 import profOnashogaImage from '@/assets/images/Prof Onashoga.jpg'
+import enochImage from '@/assets/images/Enoch.jpeg'
 import drAdejimiImage from '@/assets/images/Dr Adejimi.png'
 import drFalanaImage from '@/assets/images/Dr Falana.jpg'
 import drAborisadeImage from '@/assets/images/Dr Aborisade.png'
@@ -97,6 +98,11 @@ const hubTeam: TeamMember[] = [
     name: 'Dr. Dada O. Aborisade',
     role: 'Member',
     image: drAborisadeImage,
+  },
+  {
+    name: 'Enoch Oluwumi',
+    role: 'Research Student',
+    image: enochImage,
   },
 ]
 </script>
