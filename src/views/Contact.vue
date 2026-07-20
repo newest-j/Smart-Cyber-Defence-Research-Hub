@@ -44,7 +44,7 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-white mb-1">Email</h4>
-                  <p class="text-gray-400">info@smartcyberhub.org</p>
+                  <p class="text-gray-400">info@smartcyberdefencehub.org</p>
                 </div>
               </div>
 
@@ -138,12 +138,16 @@
           <!-- Contact Form -->
           <div class="bg-secondary/50 border border-gray-800 rounded-xl p-8">
             <h3 class="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
-            <form class="space-y-6">
+            <p v-if="statusMessage" class="mb-4 text-sm" :class="statusClass">
+              {{ statusMessage }}
+            </p>
+            <form class="space-y-6" @submit.prevent="submitForm">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
+                  v-model="form.name"
                   class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
                   placeholder="Your name"
                 />
@@ -155,6 +159,7 @@
                 <input
                   type="email"
                   id="email"
+                  v-model="form.email"
                   class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
                   placeholder="your@email.com"
                 />
@@ -165,6 +170,7 @@
                 >
                 <select
                   id="subject"
+                  v-model="form.subject"
                   class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
                 >
                   <option value="">Select a subject</option>
@@ -181,15 +187,17 @@
                 <textarea
                   id="message"
                   rows="5"
+                  v-model="form.message"
                   class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors resize-none"
                   placeholder="Your message..."
                 ></textarea>
               </div>
               <button
                 type="submit"
+                :disabled="isSubmitting"
                 class="w-full px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-200"
               >
-                Send Message
+                {{ isSubmitting ? 'Sending...' : 'Send Message' }}
               </button>
             </form>
           </div>
@@ -200,5 +208,61 @@
 </template>
 
 <script setup lang="ts">
+import { computed, reactive, ref } from 'vue'
+
 import SectionTitle from '@/components/SectionTitle.vue'
+import { sendContactMessage, type ContactFormPayload } from '@/services/api'
+
+const form = reactive<ContactFormPayload>({
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+})
+
+const isSubmitting = ref(false)
+const statusMessage = ref('')
+const statusType = ref<'success' | 'error' | ''>('')
+
+const statusClass = computed(() => {
+  if (statusType.value === 'success') {
+    return 'text-emerald-400'
+  }
+
+  if (statusType.value === 'error') {
+    return 'text-red-400'
+  }
+
+  return 'text-gray-300'
+})
+
+async function submitForm() {
+  isSubmitting.value = true
+  statusMessage.value = ''
+  statusType.value = ''
+
+  try {
+    const response = await sendContactMessage(form)
+
+    form.name = ''
+    form.email = ''
+    form.subject = ''
+    form.message = ''
+    statusType.value = 'success'
+    statusMessage.value = response.message
+  } catch (error) {
+    const axiosMessage =
+      error && typeof error === 'object' && 'response' in error
+        ? (error as {
+            response?: { data?: { message?: string; errors?: Record<string, string[]> } }
+          })
+        : null
+
+    statusType.value = 'error'
+    statusMessage.value =
+      axiosMessage?.response?.data?.message ?? 'Unable to send your message right now.'
+  } finally {
+    isSubmitting.value = false
+  }
+}
 </script>
