@@ -22,8 +22,9 @@
       </h1>
 
       <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 text-pretty">
-        Welcome to Smart Cyber Defence (SCD), a cutting-edge research initiative dedicated to
-        advancing the science, technology, and strategy of cybersecurity and digital resilience.
+        The Smart Cyber Defence (SCD) Research Hub is an interdisciplinary research community that
+        is focused on addressing emerging cybersecurity challenges through research, innovation, and
+        collaboration.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
