@@ -1,6 +1,6 @@
-# SCD Smart Cyber Defence
+# Smart Cyber Defence (SCD)
 
-A modern, responsive website for SCD Smart Cyber Defence - a research organization dedicated to advancing cybersecurity through innovation and collaboration.
+A modern, responsive website for Smart Cyber Defence (SCD) - a research organization dedicated to advancing cybersecurity through innovation and collaboration.
 
 ## Tech Stack
 
@@ -108,7 +108,7 @@ npm run preview
 
 ## License
 
-This project is proprietary to SCD Smart Cyber Defence.
+This project is proprietary to Smart Cyber Defence (SCD).
 
 ## Contact
 

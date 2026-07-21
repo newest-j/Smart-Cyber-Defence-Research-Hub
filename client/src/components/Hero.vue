@@ -17,12 +17,12 @@
     <!-- Content -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">
-        <span class="block">SCD Smart Cyber Defence</span>
+        <span class="block">Smart Cyber Defence</span>
         <span class="block text-2xl md:text-3xl font-semibold text-primary mt-1">Research Hub</span>
       </h1>
 
       <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 text-pretty">
-        Welcome to SCD Smart Cyber Defence, a cutting-edge research initiative dedicated to
+        Welcome to Smart Cyber Defence (SCD), a cutting-edge research initiative dedicated to
         advancing the science, technology, and strategy of cybersecurity and digital resilience.
       </p>
 

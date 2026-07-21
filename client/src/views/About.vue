@@ -5,7 +5,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="About Us"
-          subtitle="Learn more about SCD Smart Cyber Defence and our mission"
+          subtitle="Learn more about Smart Cyber Defence (SCD) and our mission"
         />
       </div>
     </section>
@@ -17,7 +17,7 @@
           <div>
             <h2 class="text-3xl font-bold text-white mb-6">Who We Are</h2>
             <p class="text-gray-300 mb-6 leading-relaxed">
-              SCD Smart Cyber Defence is an interdisciplinary research community focused on
+              Smart Cyber Defence (SCD) is an interdisciplinary research community focused on
               addressing pressing cybersecurity challenges through research, innovation, and
               collaboration.
             </p>
@@ -27,7 +27,7 @@
             </p>
           </div>
           <div class="flex justify-center">
-            <img src="/logo.jpeg" alt="SCD Smart Cyber Defence logo" class="w-64 h-auto" />
+            <img src="/logo.jpeg" alt="Smart Cyber Defence (SCD) logo" class="w-64 h-auto" />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
     <!-- Header -->
     <section class="py-16 bg-linear-to-b from-secondary/50 to-transparent">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle title="Contact Us" subtitle="Get in touch with SCD Smart Cyber Defence" />
+        <SectionTitle title="Contact Us" subtitle="Get in touch with Smart Cyber Defence (SCD)" />
       </div>
     </section>
 

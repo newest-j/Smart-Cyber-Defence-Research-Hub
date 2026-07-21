@@ -5,7 +5,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="News & Events"
-          subtitle="Stay updated with the latest happenings at SCD Smart Cyber Defence"
+          subtitle="Stay updated with the latest happenings at Smart Cyber Defence (SCD)"
         />
       </div>
     </section>

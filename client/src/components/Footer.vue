@@ -5,9 +5,9 @@
         <!-- Logo & Description -->
         <div class="col-span-1 md:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="/logo.jpeg" alt="SCD Smart Cyber Defence logo" class="h-12 w-auto" />
+            <img src="/logo.jpeg" alt="Smart Cyber Defence (SCD) logo" class="h-12 w-auto" />
             <div>
-              <h3 class="text-lg font-semibold text-white">SCD Smart Cyber Defence</h3>
+              <h3 class="text-lg font-semibold text-white">Smart Cyber Defence (SCD)</h3>
               <p class="text-sm text-gray-400">Research Hub</p>
             </div>
           </div>
@@ -86,7 +86,9 @@
       <!-- Bottom Bar -->
       <div class="mt-12 pt-8 border-t border-gray-700">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-gray-400 text-sm">© 2026 SCD Smart Cyber Defence — All Rights Reserved</p>
+          <p class="text-gray-400 text-sm">
+            © 2026 Smart Cyber Defence (SCD) — All Rights Reserved
+          </p>
           <div class="flex gap-6">
             <router-link
               v-for="link in footerLinks"
