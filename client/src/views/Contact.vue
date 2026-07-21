@@ -16,7 +16,7 @@
             <h3 class="text-2xl font-bold text-white mb-6">Get Involved</h3>
             <p class="text-gray-300 mb-8">
               Whether you are a researcher seeking collaboration, a student interested in
-              opportunities, or an organization looking to partner with us — you're welcome to join
+              opportunities, or an organization looking to partner with us, you're welcome to join
               our mission.
             </p>
 
