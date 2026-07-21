@@ -3,10 +3,7 @@
     <!-- Header -->
     <section class="py-16 bg-linear-to-b from-secondary/50 to-transparent">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle
-          title="Contact Us"
-          subtitle="Get in touch with the Smart Cyber Defence Research Hub"
-        />
+        <SectionTitle title="Contact Us" subtitle="Get in touch with SCD Smart Cyber Defence" />
       </div>
     </section>
 
@@ -44,7 +41,12 @@
                 </div>
                 <div>
                   <h4 class="text-lg font-semibold text-white mb-1">Email</h4>
-                  <p class="text-gray-400">info@smartcyberdefencehub.org</p>
+                  <a
+                    href="mailto:info@smartcyberdefencehub.org"
+                    class="text-gray-400 hover:text-primary transition-colors"
+                  >
+                    info@smartcyberdefencehub.org
+                  </a>
                 </div>
               </div>
 

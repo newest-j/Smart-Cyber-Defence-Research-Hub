@@ -4,8 +4,14 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <router-link to="/" class="flex items-center gap-3">
-          <img src="/logo.jpeg" alt="SCDRH Logo" class="h-10 w-auto rounded-full" />
-          <span class="text-lg font-semibold text-white hidden sm:block">SCDRH</span>
+          <img
+            src="/logo.jpeg"
+            alt="SCD Smart Cyber Defence logo"
+            class="h-10 w-auto rounded-full"
+          />
+          <span class="text-lg font-semibold text-white hidden sm:block"
+            >SCD Smart Cyber Defence</span
+          >
         </router-link>
 
         <!-- Desktop Navigation -->

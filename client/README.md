@@ -1,6 +1,6 @@
-# Smart Cyber Defence Research Hub (SCDRH)
+# SCD Smart Cyber Defence
 
-A modern, responsive website for the Smart Cyber Defence Research Hub - a research organization dedicated to advancing cybersecurity through innovation and collaboration.
+A modern, responsive website for SCD Smart Cyber Defence - a research organization dedicated to advancing cybersecurity through innovation and collaboration.
 
 ## Tech Stack
 
@@ -108,9 +108,9 @@ npm run preview
 
 ## License
 
-This project is proprietary to Smart Cyber Defence Research Hub.
+This project is proprietary to SCD Smart Cyber Defence.
 
 ## Contact
 
-- **Email:** info@scdrh.org
+- **Email:** [info@smartcyberdefencehub.org](mailto:info@smartcyberdefencehub.org)
 - **Location:** Federal University of Agriculture Abeokuta (Funaab), Nigeria

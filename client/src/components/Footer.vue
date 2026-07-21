@@ -5,9 +5,9 @@
         <!-- Logo & Description -->
         <div class="col-span-1 md:col-span-2">
           <div class="flex items-center gap-3 mb-4">
-            <img src="/logo.jpeg" alt="SCDRH Logo" class="h-12 w-auto" />
+            <img src="/logo.jpeg" alt="SCD Smart Cyber Defence logo" class="h-12 w-auto" />
             <div>
-              <h3 class="text-lg font-semibold text-white">Smart Cyber Defence</h3>
+              <h3 class="text-lg font-semibold text-white">SCD Smart Cyber Defence</h3>
               <p class="text-sm text-gray-400">Research Hub</p>
             </div>
           </div>
@@ -50,7 +50,12 @@
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              info@smartcyberdefencehub.org
+              <a
+                href="mailto:info@smartcyberdefencehub.org"
+                class="text-gray-400 hover:text-primary transition-colors"
+              >
+                info@smartcyberdefencehub.org
+              </a>
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -81,9 +86,7 @@
       <!-- Bottom Bar -->
       <div class="mt-12 pt-8 border-t border-gray-700">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-gray-400 text-sm">
-            © 2026 Smart Cyber Defence Research Hub — All Rights Reserved
-          </p>
+          <p class="text-gray-400 text-sm">© 2026 SCD Smart Cyber Defence — All Rights Reserved</p>
           <div class="flex gap-6">
             <router-link
               v-for="link in footerLinks"
