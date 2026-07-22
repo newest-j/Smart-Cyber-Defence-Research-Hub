@@ -90,25 +90,27 @@
     <!-- CTA Section -->
     <section class="py-20 bg-linear-to-r from-primary/20 via-secondary to-accent/20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Get Involved</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Participate in the Survey</h2>
         <p class="text-gray-300 mb-8 text-lg">
-          Whether you are a researcher seeking collaboration, a student interested in opportunities,
-          or an organization looking to partner with us — you're welcome to join our mission.
+          You are invited to contribute to our study on cyberattack incidences reporting in Nigeria
+          by filling this short survey form.
         </p>
-        <router-link
-          to="/contact"
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfJTKnUsT4zdE8OSY7A_CVp66YzhTh8EnwgXrX3mlm_o_Efjw/viewform?usp=publish-editor"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-200"
         >
-          Contact Us
+          Take the Survey
           <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
+              d="M14 3h7m0 0v7m0-7L10 14m-4 0h4v4"
             />
           </svg>
-        </router-link>
+        </a>
       </div>
     </section>
 

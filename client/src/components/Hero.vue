@@ -42,12 +42,14 @@
             />
           </svg>
         </router-link>
-        <router-link
-          to="/contact"
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfJTKnUsT4zdE8OSY7A_CVp66YzhTh8EnwgXrX3mlm_o_Efjw/viewform?usp=publish-editor"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:border-primary hover:text-primary transition-all duration-200"
         >
-          Get Involved
-        </router-link>
+          Participate in Survey
+        </a>
       </div>
     </div>
 
