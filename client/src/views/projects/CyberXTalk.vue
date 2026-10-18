@@ -38,6 +38,15 @@
               class="w-full rounded-md mb-6"
             />
             <div class="flex flex-wrap items-center gap-3 mb-6">
+              <a
+                href="https://cyberxtalk.smartcyberdefencehub.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-dark hover:bg-primary/80 transition-colors"
+                aria-label="Visit CyberXTalk site (opens in a new tab)"
+              >
+                Visit site
+              </a>
               <span
                 class="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-400"
                 >Featured Research</span
