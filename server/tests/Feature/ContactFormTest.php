@@ -24,6 +24,29 @@ it('validates and sends contact messages', function () {
     });
 });
 
+it('rate limits contact messages to five per minute', function () {
+    Mail::fake();
+
+    $payload = [
+        'name' => 'Test User',
+        'email' => 'test@example.com',
+        'subject' => 'Partnership Inquiry',
+        'message' => 'Please get in touch with us about collaboration.',
+    ];
+
+    foreach (range(1, 5) as $attempt) {
+        $this->postJson('/api/contact', $payload)->assertOk();
+    }
+
+    $this->postJson('/api/contact', $payload)->assertStatus(429);
+
+    Mail::assertSentCount(5);
+});
+
+it('does not expose a public cache clearing route', function () {
+    $this->get('/clear-cache')->assertNotFound();
+});
+
 it('rejects invalid contact messages', function () {
     $response = $this->postJson('/api/contact', [
         'name' => '',
